@@ -1,0 +1,250 @@
+/************************************************************************
+// For extensive details about creating a Populr theme, please visit
+// http://developers.populr.me/theming
+*/
+
+// You must import variables.less before importing populr_mixins.less
+@import 'variables';
+  //todo uncomment and clear
+  //@import 'http://populr.me/assets/developers/populr_mixins.less';
+@import '../todo/populr_mixins';
+@import 'preboot';
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500);
+
+body {
+  background: @background-color;
+}
+
+// Call preboot.less's reset to reduce browser inconsistencies
+#reset > .global-reset();
+
+/////////////////////////////////////////////////////////////////////////
+// Typography defaults
+
+@text-color: #111;
+// @custom-color is defined in variables.less
+@link-color: @custom-color;
+
+// Title text defaults
+// @headline-font-family is defined in variables.less
+.headline-text() {
+  font-family: @headline-font-family;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.pop-title-text() {
+  font-family: @headline-font-family;
+  font-size: 56px;
+  line-height: 1.1;
+}
+
+// Body text defaults
+@body-font-family: 'Raleway', sans-serif;
+.body-text() {
+  font-family: @body-font-family;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#pop {
+  font-family: @body-font-family;
+  color: @text-color;
+  i, em {
+    font-style: italic;
+  }
+  b, strong {
+    font-weight: 700;
+  }
+
+  a {
+    color: @link-color;
+
+    &:active {
+       color: lighten(@link-color, 20%);
+
+    }
+  }
+}
+
+// End typography defaults
+/////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////
+// Structure
+
+// Content wrapper
+#main-content {
+  margin: 0 auto;
+}
+
+// Logo helper
+#pop-logo {
+  margin: 20px auto;
+}
+
+// Pop title
+#pop-title {
+  max-width: 960px;
+  padding: 0 20px;
+  margin: 50px auto;
+
+  .pop-title-text();
+  text-align: center;
+}
+
+.columnizer-col {
+  background-color: #F7F6F0;
+  padding: 10px 10px;
+
+}
+
+// Assets
+.asset-title {
+  .headline-text();
+  margin: 10px 0;
+}
+
+//todo cleanup asset temp bg
+.asset {
+  background-color: lightsteelblue !important;
+}
+
+.description, .body {
+  .body-text();
+
+  margin: 10px 0;
+  ul, ol {
+    margin: .5em 0 .5em 1.5em;
+  }
+  ul li {
+    list-style-type: disc;
+  }
+  ol li {
+    list-style-type: decimal;
+  }
+}
+
+// Text asset styling
+.asset-type-text {
+  border-top: 5px solid #292929;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  background-color: @background-color !important;
+
+  .asset-title {
+    padding: 10px 0 30px 0;
+  }
+
+  &.asset-size-1 {
+    background-color: #ebe9e4 !important;
+
+    .asset-title {
+      font-size: 24px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.4;
+
+    }
+
+  }
+
+}
+
+// Image asset styling
+#populr > #image-slider-themes > .basic();
+
+// Document asset styling
+.documents {
+  margin: 10px auto;
+
+  li {
+    margin-bottom: 1em;
+
+    a {
+      text-decoration: none;
+      line-height: 1.2;
+
+      i.icon {
+        font-style: normal !important;
+      }
+    }
+  }
+}
+
+// Clearfix
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {
+  zoom: 1;
+}
+
+/* IE6 */
+*:first-child+html .clearfix {
+  zoom: 1;
+}
+
+/* IE7 */
+
+// End structure
+/////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////
+// Mobile
+//
+// The Populr mobile reset will handle some of the basics of mobilizing 
+// your theme, such as stacking all of the assets vertically and scaling 
+// them to 100% of the width of their container. However, you'll have to 
+// fine tune the styling to make your theme look really good on mobile
+// devices.
+
+@media screen and (max-width: 960px) {
+  #populr > .mobile-reset();
+
+  // Edit the grid for mobile
+  .columnizer-row-inner, #pop-title {
+    max-width: 640px;
+  }
+
+  .columnizer-col {
+    margin: 0 10px 20px !important;
+  }
+
+  // Edit the typography for mobile
+  #pop-title {
+    font-size: 40px !important;
+  }
+
+  .asset-title {
+    font-size: 24px !important;
+  }
+
+  .description, .body, .description li, .body li {
+    font-size: 14px !important;
+  }
+
+  .asset-title, .description, .body, .description li, .body li {
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #pop-title {
+    font-size: 32px !important;
+  }
+
+  .asset-title {
+    font-size: 20px !important;
+  }
+}
