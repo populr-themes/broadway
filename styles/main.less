@@ -94,8 +94,8 @@ body {
 
 .columnizer-col {
   background-color: #F7F6F0;
-  //  padding: 10px 10px;
-
+    padding: 10px 10px;
+//todo play with padding later
 }
 
 // Assets
@@ -206,18 +206,16 @@ body {
   }
   &.asset-size-2 {
     min-height: 350px;
-
+    border-top: 5px solid #292929;
 
     .slideshow {
       margin-top: 25px;
-
       height: 188px !important;
 
       .slide {
         width: 100% !important;
-
         img {
-          width:100% !important;
+          width: 100% !important;
         }
       }
 
@@ -238,30 +236,186 @@ body {
 
     }
 
-      .floated-parent-for-imagegroup-embedgroup-texts{
-        width:55%;
-
-        float: right;
+    .floated-parent-for-imagegroup-embedgroup-texts {
+      width: 55%;
+      margin-top: 20px;
+      float: right;
+    }
+    .populr-image-slider {
+      float: left;
+      width: 40%;
+      div.slideshow {
+        width: 100% !important;
       }
-      .populr-image-slider{
-        float: left;
-        width:40%;
-        div.slideshow {
-          width : 100% !important;
+
+    }
+
+  }
+  &.asset-size-3 {
+    border-top: 5px solid #292929;
+    .slideshow {
+      width: 100% !important;
+      height: 188px !important;
+      margin-top: 10px;
+      .slide {
+        width: 100%;
+        img {
+          width: 100%;
         }
-
       }
+    }
+    .asset-title {
 
+      font-size: 20px;
+      padding-top: 20px;
+      line-height: 1.2;
+      font-weight: 400;
+
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 400;
+      color:#666;
+      font-style: italic;
+    }
 
   }
+  &.asset-size-4 {
+    border-top: 5px solid #292929;
+    .slideshow {
+      width: 100% !important;
+      height: 170px !important;
+      margin-top: 10px;
+      .slide {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .asset-title {
+
+      font-size: 16px;
+      padding-top: 20px;
+      line-height: 1.2;
+      font-weight: 400;
+
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 400;
+      color:#666;
+      font-style: italic;
+    }
 
   }
+}
+
+//Embed asset styling
+.asset-type-embedgroup {
+
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  &.asset-size-1 {
+
+    .asset-title {
+
+      font-size: 32px;
+      padding-top: 40px;
+      padding-bottom: 5px;
+      line-height: 36px;
+      font-weight: bold;
+      border-top: 10px solid #292929;
+
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+  }
+  &.asset-size-2 {
+    min-height: 350px;
+    border-top: 5px solid #292929;
 
 
 
+    .asset-title {
+
+      /*font-size: 32px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+      line-height: 36px;
+      font-weight: bold;*/
+
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.2;
+
+    }
+
+    .floated-parent-for-imagegroup-embedgroup-texts {
+      width: 55%;
+      margin-top: 20px;
+      float: right;
+    }
+    div.embed {
+      float: left;
+      width: 40%;
+
+    }
+
+  }
+  &.asset-size-3 {
+    border-top: 5px solid #292929;
+
+    .asset-title {
+
+      font-size: 20px;
+      padding-top: 20px;
+      line-height: 1.2;
+      font-weight: 400;
+
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 400;
+      color:#666;
+      font-style: italic;
+    }
+
+  }
+  &.asset-size-4 {
+    border-top: 5px solid #292929;
+
+    .asset-title {
+
+      font-size: 16px;
+      padding-top: 20px;
+      line-height: 1.2;
+      font-weight: 400;
+
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 400;
+      color:#666;
+      font-style: italic;
+    }
+
+  }
+}
 // Document asset styling
 .documents {
   margin: 10px auto;
+  text-align: center !important;
 
   li {
     margin-bottom: 1em;
