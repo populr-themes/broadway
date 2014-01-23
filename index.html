@@ -78,25 +78,28 @@
 
       {{#asset "imagegroup" size="1"}}
         {{{title}}}
-        {{{imageslider images width="920" height="360"}}}
         {{{description}}}
+        {{{imageslider images width="920" height="500" crop_single=true}}}
+
       {{/asset}}
  
       {{#asset "imagegroup" size="2"}}
+        {{{imageslider images width="200" height="188" crop_single=true}}}
+            <div class="floated-parent-for-imagegroup-embedgroup-texts">
         {{{title}}}
-        {{{imageslider images width="430" height="353"}}}
         {{{description}}}
+            </div>
       {{/asset}}
   
       {{#asset "imagegroup" size="3"}}
         {{{title}}}
-        {{{imageslider images width="266" height="230"}}}
+        {{{imageslider images width="266" height="230" crop_single=true}}}
         {{{description}}}
       {{/asset}}
 
       {{#asset "imagegroup" size="4"}}
         {{{title}}}
-        {{{imageslider images width="185" height="170"}}}
+        {{{imageslider images width="185" height="170" crop_single=true}}}
         {{{description}}}
       {{/asset}}
   
