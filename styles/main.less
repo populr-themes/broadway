@@ -57,11 +57,24 @@ body {
   }
 
   a {
-//    color: @link-color;
-color:#292929;
+    //    color: @link-color;
+    color: #292929;
+
     &:active {
-//      color: lighten(@link-color, 20%);
-        color:@custom-color;
+      //      color: lighten(@link-color, 20%);
+      color: @custom-color;
+    }
+    &:hover {
+      color: @custom-color;
+
+    }
+  }
+  .link-btn {
+    background-color: #292929 !important;
+    border-radius: 0 !important;
+
+    &:hover {
+      background-color: @custom-color !important;
     }
   }
 }
@@ -94,8 +107,8 @@ color:#292929;
 
 .columnizer-col {
   background-color: #F7F6F0;
-//    padding: 10px 10px;
-//todo play with padding later
+  //    padding: 10px 10px;
+  //todo play with padding later
 }
 
 // Assets
@@ -276,7 +289,7 @@ color:#292929;
       font-size: 14px;
       line-height: 1.2;
       font-weight: 400;
-      color:#666;
+      color: #666;
       font-style: italic;
     }
 
@@ -306,7 +319,7 @@ color:#292929;
       font-size: 14px;
       line-height: 1.2;
       font-weight: 400;
-      color:#666;
+      color: #666;
       font-style: italic;
     }
 
@@ -341,8 +354,6 @@ color:#292929;
   &.asset-size-2 {
     min-height: 350px;
     border-top: 5px solid #292929;
-
-
 
     .asset-title {
 
@@ -386,7 +397,7 @@ color:#292929;
       font-size: 14px;
       line-height: 1.2;
       font-weight: 400;
-      color:#666;
+      color: #666;
       font-style: italic;
     }
 
@@ -406,28 +417,46 @@ color:#292929;
       font-size: 14px;
       line-height: 1.2;
       font-weight: 400;
-      color:#666;
+      color: #666;
       font-style: italic;
     }
 
   }
 }
+
 // Document asset styling
-.documents {
-  margin: 10px auto;
-  text-align: center !important;
+.asset-type-documentgroup {
 
-  li {
-    margin-bottom: 1em;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-top: 5px solid #292929;
+  i.icon {
+    padding-top: 5px;
+    font-size: 120px;
+    line-height: 1.2;
+  }
 
-    a {
-      text-decoration: none;
-      line-height: 1.2;
+  .documents {
 
-      i.icon {
-        font-style: normal !important;
+    margin: 10px auto;
+    text-align: center !important;
+
+    li {
+      margin-bottom: 1em;
+
+      a {
+        text-decoration: none;
+        line-height: 1.2;
+
+        i.icon {
+          font-style: normal !important;
+        }
       }
     }
+  }
+  &.asset-size-1 {
+
   }
 }
 
