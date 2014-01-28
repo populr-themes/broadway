@@ -210,7 +210,7 @@ body {
       padding-bottom: 5px;
       line-height: 36px;
       font-weight: bold;
-      border-top: 10px solid #292929;
+
 
     }
     .description, .body, .description li, .body li, {
@@ -430,14 +430,17 @@ body {
 // Document asset styling
 .asset-type-documentgroup {
 
+  background-color: #EBE9E4 !important;
   text-align: center;
   margin-top: 10px;
   padding-bottom: 20px;
   border-top: 5px solid #292929;
+
   i.icon {
     padding-top: 5px;
     font-size: 120px;
     line-height: 1.2;
+    font-style: normal !important;
   }
 
   .documents {
@@ -446,13 +449,16 @@ body {
     text-align: center !important;
 
     li {
-      margin-bottom: 1em;
+     
+      margin: 0 1em auto;
+      text-align: left;
 
       a {
         text-decoration: none;
         line-height: 1.2;
 
         i.icon {
+          font-size: inherit;
           font-style: normal !important;
         }
       }
