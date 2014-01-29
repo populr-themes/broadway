@@ -50,11 +50,15 @@
      prevent issues with quote escaping and invalid markup. -->
 <script id="theme" type="text/x-handlebars-template">
 
-    {{logo max_width=250 max_height=100}}
+    {{logo max_width=123 max_height=35}}
 
-    {{{title}}}
+    <div class="custom-pop-title">
+        {{{title}}}
+        {{{description}}}
+    </div>
 
-    {{#region "columnizer" id="main-region" max_cols="4" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|T-1,T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-4|V-1|V-2|V-1,V-2|V-1,V-2,V-3|V-1,V-2,V-3,V-4|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-4|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-4"}}
+    {{#region "columnizer" id="main-region" max_cols="4" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|T-1,T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-4|V-1|V-1,V-1|V-1,V-1,V-1|V-1,V-1,V-1,V-1|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-4|E-1|E-1,E-1|E-1,E-1,E-1|E-1,E-1,E-1,E-1"}}
+
 
     {{#asset "text" size="1"}}
     {{{title}}}
@@ -84,7 +88,7 @@
     {{/asset}}
 
     {{#asset "imagegroup" size="2"}}
-    {{{imageslider images width="200" height="188" crop_single=true}}}
+    {{{imageslider images width="200" height="250" crop_single=true}}}
     <div class="floated-parent-for-imagegroup-embedgroup-texts">
         {{{title}}}
         {{{description}}}
@@ -105,7 +109,7 @@
 
     {{#asset "documentgroup" size="1"}}
             <!--changing the icon position-->
-    <i class="icon icon-circle-arrow-right"/>
+    <i class="icon icon-file"/>
     {{{title}}}
     {{{description}}}
     <ul class="documents">
@@ -118,7 +122,7 @@
 
     {{#asset "documentgroup" size="2"}}
 
-    <i class="icon icon-circle-arrow-right"/>
+    <i class="icon icon-file"/>
     {{{title}}}
     {{{description}}}
     <ul class="documents">
@@ -131,7 +135,7 @@
 
     {{#asset "documentgroup" size="3"}}
     {{{title}}}
-    <i class="icon icon-circle-arrow-right"/>
+    <i class="icon icon-file"/>
     {{{description}}}
     <ul class="documents">
         {{#documents}}
@@ -143,9 +147,9 @@
 
     {{#asset "documentgroup" size="4"}}
     {{{title}}}
-    <i class="icon icon-circle-arrow-right"/>
-            <!--todo implement the idea-->
-            <div class="icon icon-custom">{{{description}}}</div>
+    <i class="icon icon-file"/>
+            <!--todo implement the idea of flexible icon-->
+            <!--<div class="icon icon-custom">{{{description}}}</div>-->
     {{{description}}}
     <ul class="documents">
         {{#documents}}

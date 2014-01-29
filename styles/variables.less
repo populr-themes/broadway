@@ -2,8 +2,6 @@
 // For extensive details about creating a Populr theme, please visit
 // http://developers.populr.me/theming
 */
-
-
 // Use this statement to import Google Web Fonts
 // @import '//fonts.googleapis.com/css?family=Open+Sans:300,700spo&.css';
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
@@ -20,14 +18,13 @@
 // color in @background-color.
 @background-color: #F7F6F0;
 
-
 /************************************************************************
 // The following values can be edited by Populr's users via dropdown 
 // menus in the pop editor.
 */
 
 // @headline-font-family is changed with the Font dropdown 
-@headline-font-family: 'Droid Serif', serif;
+@headline-font-family: 'Droid Serif', serif !important;
 
 // @custom-color is changed with the custome color picker in the Color 
 // dropdown. The color picker will only be available to your users if 
@@ -35,7 +32,6 @@
 // documentation for details on how this works:
 // http://developers.populr.me/theming/
 @custom-color: #C71C77;
-
 
 /************************************************************************
 // @populr-theme version
@@ -60,35 +56,59 @@
 @populr-theme-version: 1;
 
 // To use your own grid, edit the following properties as needed.
+
 .columnizer-row-inner {
-  margin: 0 auto;
-  max-width: 90%;  //960px
+  margin: 40px auto 0;
+  max-width: 95%; //960px
 
 }
 
 .columnizer-col {
-	float: left;
-	margin: 10px 0;
+  float: left;
+  //	margin: 10px 0;
 
+  .columnizer-cols1 & {
+    width: 100%;
+  }
+  //920px/960px
+  .columnizer-cols2 & {
+    width: 48.35%;
+    margin-left: 3.3%
+  }
+  //430px/960px
+  .columnizer-cols3 & {
+    width: 31.67%;
+    margin-left: 2.495%;
 
+  }
+  //266px/960px % 11px / 960px
 
-	.columnizer-cols1 & { width: 100%;	}  //920px/960px
-	.columnizer-cols2 & { width: 48.35%;
-    margin-left:3.3% }  //430px/960px
-	.columnizer-cols3 & { width: 31.67%;
-		margin-left: 2.495%;
+  .columnizer-cols4 & {
+    width: 23.35%;
+    margin-left: 2.2%
+  }
+  // 185px/960px
 
-	}   //266px/960px % 11px / 960px
-
-    .columnizer-cols4 & { width: 23.35%;
-    margin-left: 2.2%} // 185px/960px
-
-	&:first-child { margin-left: 0; }
-	&:last-child { margin-right: 0; }
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
+
 // clearfix for columnizer rows
-.columnizer-row:after { display: block; visibility: hidden; height: 0; clear: both; content: ' '; }
-.columnizer-row { *zoom: 1; }
+.columnizer-row:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ' ';
+}
+
+.columnizer-row {
+  *zoom: 1;
+}
 
 // If you've set @populr-theme-version to 1, we recommend using these mixins.
 #populr > .link-button(@custom-color);

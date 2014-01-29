@@ -39,7 +39,7 @@ body {
 }
 
 // Body text defaults
-@body-font-family: 'Raleway', sans-serif;
+@body-font-family: 'Raleway', sans-serif !important;
 .body-text() {
   font-family: @body-font-family;
   font-size: 14px;
@@ -72,6 +72,8 @@ body {
   .link-btn {
     background-color: #292929 !important;
     border-radius: 0 !important;
+    font-style: normal;
+    font-size: 12px;
 
     &:hover {
       background-color: @custom-color !important;
@@ -92,32 +94,45 @@ body {
 
 // Logo helper
 #pop-logo {
-  margin-top: 35px;
-  margin-bottom: 45px;
-  margin-left: 5%;
+  padding-top: 45px;
+  float:left
 
 }
 
 // Pop title
-#pop-title {
-  max-width: 960px;
-  padding: 0 20px;
-//  margin: 50px auto;
-  .pop-title-text();
+.custom-pop-title {
+  border-top: 10px solid #292929;
+  max-width: 87.4%;
   text-align: center;
+  font-family: @headline-font-family;
+  margin: 50px auto 0;
+#pop-title {
+  .pop-title-text();
+  font-size: 32px;
+  line-height: 1.1;
+  padding-top: 40px;
 
+  font-weight: 700;
+
+}
+  .description {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
 }
 
 .columnizer-col {
-  background-color: #F7F6F0;
+
   //    padding: 10px 10px;
   //todo play with padding later
 }
 
+
 // Assets
 .asset-title {
   .headline-text();
-  margin: 10px 0;
+//  margin: 10px 0;
 }
 
 /*//////todo cleanup asset temp bg todo cleanup
@@ -138,6 +153,13 @@ body {
 //
 ////////*/
 
+//default background for all content
+#main-region {
+  width:92%;
+  margin: 0 auto;
+  background-color: @background-color;
+}
+
 .description, .body {
   .body-text();
 
@@ -152,26 +174,106 @@ body {
     list-style-type: decimal;
   }
 }
+//bordering the assets
+//top border for assets
+.columnizer-row-inner {
+  border-top: 5px solid #292929;
+  padding-top: 15px;
+  //removing the border for the text assets
+  .columnizer-row-contents-text & {
+    border-top: none ;
+    padding-top: 0 ;
+  }
+  .columnizer-row-contents-text-text & {
+    border-top: none ;
+    padding-top: 0 ;
+  }.columnizer-row-contents-text-text-text & {
+    border-top: none ;
+    padding-top: 0 ;
+  }.columnizer-row-contents-text-text-text-text & {
+    border-top: none ;
+    padding-top: 0 ;
+  }
+}
+//thin border for all size4 assets
+.asset-size-4 {
+  border-bottom: 1px solid #ccc;
+  &:hover {
+    border-bottom-color: @custom-color;
+  }
+}
+//sleek border at the end of the page
+.columnizer-row:last-child .columnizer-row-inner {
+
+  padding-bottom: 40px;
+  border-bottom: 5px solid @custom-color;
+
+}
 
 // Text asset styling
 .asset-type-text {
   border-top: 5px solid #292929;
-  padding-bottom: 20px;
-  margin-top: 10px;
-  background-color: @background-color !important;
+  padding-bottom: 30px;
+//  margin-top: 10px;
+//  background-color: @background-color !important;
 
   .asset-title {
     padding: 10px 0 30px 0;
   }
 
   &.asset-size-1 {
+    border-top: none;
+    padding-bottom: 20px;
     background-color: #ebe9e4 !important;
 
     .asset-title {
       font-size: 24px;
-      padding-top: 30px;
+      padding-top: 40px;
       padding-bottom: 20px;
 
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.4;
+
+    }
+
+  }&.asset-size-2 {
+
+    .asset-title {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.4;
+
+    }
+
+  }
+  &.asset-size-3 {
+
+    .asset-title {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.2;
+
+    }
+    .description, .body, .description li, .body li, {
+      font-size: 14px;
+      line-height: 1.4;
+
+    }
+
+  }
+  &.asset-size-4 {
+
+    .asset-title {
+
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.2;
     }
     .description, .body, .description li, .body li, {
       font-size: 14px;
@@ -189,7 +291,7 @@ body {
 .asset-type-imagegroup {
 
   text-align: center;
-  margin-top: 10px;
+//  margin-top: 10px;
   padding-bottom: 20px;
   &.asset-size-1 {
     .slideshow {
@@ -221,54 +323,55 @@ body {
 
   }
   &.asset-size-2 {
-    min-height: 350px;
-    border-top: 5px solid #292929;
+
+    color:#fff;
+    text-shadow:1px 1px black ;
+    height: 250px !important;
+
+
 
     .slideshow {
-      margin-top: 25px;
-      height: 188px !important;
+      width: 100% !important;
+      height: 250px !important;
 
       .slide {
-        width: 100% !important;
+        width: 100%;
         img {
-          width: 100% !important;
+          width: 100%;
         }
       }
-
     }
 
     .asset-title {
+    font-size: 16px;
 
-      /*font-size: 32px;
-      padding-top: 20px;
-      padding-bottom: 5px;
-      line-height: 36px;
-      font-weight: bold;*/
+
 
     }
     .description, .body, .description li, .body li, {
-      font-size: 14px;
-      line-height: 1.2;
+      font-size: 13px;
+      line-height: 1.1;
+
+
 
     }
 
     .floated-parent-for-imagegroup-embedgroup-texts {
-      width: 55%;
-      margin-top: 20px;
-      float: right;
+      height: 250px;
+      width: 50%;
+      position: absolute;
+      top:0;
+      right: 0;
+      background-color: @custom-color;
+      background-color: rgba(red(@custom-color),green(@custom-color),blue(@custom-color),0.6);
+      z-index: 9999;
+      overflow: hidden;
     }
-    .populr-image-slider {
-      float: left;
-      width: 40%;
-      div.slideshow {
-        width: 100% !important;
-      }
 
-    }
 
   }
   &.asset-size-3 {
-    border-top: 5px solid #292929;
+//    border-top: 5px solid #292929;
     .slideshow {
       width: 100% !important;
       height: 188px !important;
@@ -298,7 +401,7 @@ body {
 
   }
   &.asset-size-4 {
-    border-top: 5px solid #292929;
+//    border-top: 5px solid #292929;
     .slideshow {
       width: 100% !important;
       height: 170px !important;
@@ -333,7 +436,7 @@ body {
 .asset-type-embedgroup {
 
   text-align: center;
-  margin-top: 10px;
+//  margin-top: 10px;
   padding-bottom: 20px;
   &.asset-size-1 {
 
@@ -344,7 +447,7 @@ body {
       padding-bottom: 5px;
       line-height: 36px;
       font-weight: bold;
-      border-top: 10px solid #292929;
+//      border-top: 10px solid #292929;
 
     }
     .description, .body, .description li, .body li, {
@@ -356,7 +459,7 @@ body {
   }
   &.asset-size-2 {
     min-height: 350px;
-    border-top: 5px solid #292929;
+//    border-top: 5px solid #292929;
 
     .asset-title {
 
@@ -386,7 +489,7 @@ body {
 
   }
   &.asset-size-3 {
-    border-top: 5px solid #292929;
+//    border-top: 5px solid #292929;
 
     .asset-title {
 
@@ -406,7 +509,7 @@ body {
 
   }
   &.asset-size-4 {
-    border-top: 5px solid #292929;
+//    border-top: 5px solid #292929;
 
     .asset-title {
 
@@ -432,9 +535,9 @@ body {
 
   background-color: #EBE9E4 !important;
   text-align: center;
-  margin-top: 10px;
+//  margin-top: 10px;
   padding-bottom: 20px;
-  border-top: 5px solid #292929;
+//  border-top: 5px solid #292929;
 
   i.icon {
     padding-top: 5px;
@@ -467,6 +570,13 @@ body {
   &.asset-size-1 {
 
   }
+}
+
+// webicon styling
+.populr-webicon {
+  box-shadow: none !important;
+  border-radius:none !important; ;
+  margin-top: 10px;
 }
 
 // Clearfix
