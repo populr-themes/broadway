@@ -92,33 +92,44 @@ body {
   margin: 0 auto;
 }
 
-// Logo helper
-#pop-logo {
-  padding-top: 45px;
-  margin-right: 1.5%;
+//removing top padding from first child
+.columnizer-row:first-child .columnizer-row-inner {
 
-}
-
-// Pop title
-.custom-pop-title {
-  border-top: 10px solid #292929;
-  max-width: 95%;
-  text-align: center;
-  font-family: @headline-font-family;
-  margin: 50px auto 0;
-#pop-title {
-  .pop-title-text();
-  font-size: 32px;
-  line-height: 1.1;
   padding-top: 40px;
-
-  font-weight: 700;
-
+  margin-top: 0;
 }
-  .description {
-    font-size: 24px;
-    line-height: 1.2;
-    font-weight: 600;
+#container-for-logo-title {
+  background-color: #F7F6F0;
+  width: 95%;
+  margin: 0 auto;
+  // Logo helper
+  #pop-logo {
+    padding-top: 45px;
+    margin-right: 1.5%;
+
+  }
+
+  // Pop title
+  .custom-pop-title-logo {
+    border-top: 10px solid #292929;
+    max-width: 95%;
+    text-align: center;
+    font-family: @headline-font-family;
+    margin: 50px auto 0;
+    #pop-title {
+      .pop-title-text();
+      font-size: 32px;
+      line-height: 1.1;
+      padding-top: 40px;
+
+      font-weight: 700;
+
+    }
+    .description {
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
   }
 }
 
@@ -216,6 +227,7 @@ body {
   border-bottom: 5px solid @custom-color;
 
 }
+
 
 // Text asset styling
 .asset-type-text {
