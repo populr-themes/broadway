@@ -81,18 +81,34 @@
     {{/asset}}
 
     {{#asset "imagegroup" size="1"}}
+
+    <!-- within an imagegroup template -->
+    {{#if_many images}}
+    <!-- loop through images -->
     {{{title}}}
     {{{description}}}
     {{{imageslider images width="920" height="500" crop_single=true}}}
+    {{else}}
+    <!-- display single image -->
+            <div class="one-image">
+    {{{title}}}
+    {{{description}}}
+    {{{imageslider images width="920" height="500" crop_single=true}}}
+            </div>
+    {{/if_many}}
 
     {{/asset}}
 
     {{#asset "imagegroup" size="2"}}
     {{{imageslider images width="200" height="250" crop_single=true}}}
+    {{#if_or title_visible description_visible}}
     <div class="floated-parent-for-imagegroup-embedgroup-texts">
         {{{title}}}
         {{{description}}}
     </div>
+    {{/if_or}}
+
+
     {{/asset}}
 
     {{#asset "imagegroup" size="3"}}
