@@ -9,6 +9,9 @@
 // });
 
 (function() {
+    if ( $(window).width() > 960) {
+
+
     var fixColumnHeights;
 
     fixColumnHeights = function() {
@@ -35,5 +38,5 @@
             $(this).find('.asset').css('min-height', '');
         });
     });
-
+    }
 }).call(this);
