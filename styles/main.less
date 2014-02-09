@@ -67,14 +67,15 @@ body {
 
   }
   .link-btn {
-    background-color: #292929 !important;
+//    background-color: #292929 !important;
     border-radius: 0 !important;
     font-style: normal;
-    font-size: 14px;
+    font-size: 15px;
+    letter-spacing: 1px;
 
-    &:hover {
+    /*&:hover {
       background-color: @custom-color !important;
-    }
+    }*/
   }
 }
 
@@ -89,6 +90,7 @@ body {
 
   font-family: @headline-font-family;
   font-size: @medium-headline;
+  text-shadow: 2px 3px 1px rgba(0,0,0,.3);
   line-height: 1.5;
   padding-top: 5px;
   padding-bottom: 20px;
@@ -198,7 +200,7 @@ body {
   // Pop title
 
   #pop-title {
-    border-top: 10px solid #292929;
+    border-top: 6px solid #292929;
     max-width: 95%;
     text-align: center;
     line-height: 1.2;
@@ -277,7 +279,7 @@ body {
 //bordering the assets
 //top border for assets
 .columnizer-row-inner {
-  border-top: 5px solid #292929;
+  border-top: 3px solid #292929;
   padding-top: 15px;
 
   .columnizer-row-contents-imagegroup & {
@@ -307,6 +309,7 @@ body {
 
   padding-bottom: 40px;
   border-bottom: 5px solid @custom-color;
+  margin-bottom: 20px;
 
 }
 
@@ -348,7 +351,7 @@ body {
 
 //special border at top for size1 image with only one image within
 .one-image {
-  border-top: 5px solid #292929;
+  border-top: 3px solid #292929;
 }
 
 .asset-type-imagegroup {
@@ -366,8 +369,8 @@ body {
 
       z-index: 2000;
       #populr > .text-color-over-color(@custom-color); //bullet color
-      background: @custom-or-default-color;
-      background-color: rgba(red(@custom-or-default-color),green(@custom-or-default-color), blue(@custom-or-default-color), 0.7);
+      background: #11;
+      background-color: rgba(0,0,0, 0.5);
       padding: 2px 12px;
       position: absolute;
       bottom: 30px;
@@ -413,8 +416,8 @@ body {
     }
 
     .floated-parent-for-imagegroup-texts {
-      padding: 10px;
-      height: 300px;
+      padding: 20px;
+      height: 280px;
       width: 50%;
       position: absolute;
       top: 0;
@@ -422,7 +425,7 @@ body {
       background-color: white;
       background-color: rgba(255, 255, 255, 0.7);
       z-index: 9999;
-      overflow: hidden;
+      overflow-y: scroll;
 
 
     }
@@ -430,13 +433,11 @@ body {
 
   }
   &.asset-size-3 {
-    //    border-top: 5px solid #292929;
     .slideshow {
       height: 270px !important;
     }
   }
   &.asset-size-4 {
-    //    border-top: 5px solid #292929;
     .slideshow {
       height: 200px !important;
     }
@@ -454,19 +455,9 @@ body {
   }
   &.asset-size-2 {
     .embed  div.height-conformed {
-      height: 250px !important;
+      height: 320px !important;
     }
 
-    .floated-parent-for-embedgroup-texts {
-      margin-top: -5px;
-      width: 45%;
-      float: right;
-    }
-    div.embed {
-      float: left;
-      width: 50%;
-
-    }
 
   }
   &.asset-size-3 {
@@ -500,6 +491,7 @@ body {
   .centered-icon {
     text-align: center;
     width: auto;
+    color:#666;
   }
 
   .documents {
@@ -508,7 +500,8 @@ body {
 
     li {
 
-      margin: 3px;
+      margin: 5px;
+      padding-top: 5px;
       text-align: left;
 
       a {
@@ -679,23 +672,12 @@ body {
       }
     }
     &.asset-size-2 {
-      min-height: 350px;
       .embed  div.height-conformed {
         height: 300px !important;
       }
 
-      .floated-parent-for-embedgroup-texts {
-        height: 300px !important;
-        overflow: hidden;
-        margin-top: -5px;
-        width: 45%;
-        float: right;
-      }
-      div.embed {
-        float: left;
-        width: 50%;
 
-      }
+
 
     }
     &.asset-size-3 {
@@ -805,23 +787,12 @@ body {
       }
     }
     &.asset-size-2 {
-      min-height: 300px;
+
       .embed  div.height-conformed {
         height: 200px !important;
       }
 
-      .floated-parent-for-embedgroup-texts {
-        height: 300px !important;
-        overflow: hidden;
-        margin-top: -5px;
-        width: 45%;
-        float: right;
-      }
-      div.embed {
-        float: left;
-        width: 50%;
 
-      }
 
     }
     &.asset-size-3 {

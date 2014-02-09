@@ -114,9 +114,9 @@
     {{/asset}}
 
     {{#asset "imagegroup" size="3"}}
-    {{{imageslider images src="{{{resize original_url width=350 height=270}}}" width="350" height="270" crop_single=true prevnext-enabled=false pager-enabled=true}}}
     {{{title}}}
     {{{description}}}
+    {{{imageslider images src="{{{resize original_url width=350 height=270}}}" width="350" height="270" crop_single=true prevnext-enabled=false pager-enabled=true}}}
     {{/asset}}
 
     {{#asset "imagegroup" size="4"}}
@@ -133,7 +133,7 @@
     <ul class="documents">
         {{#documents}}
         {{!-- The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-        <li><a href="{{original_url}}"> <i class="icon icon-download-alt"/>{{title}}</a></li>
+        <li><a href="{{original_url}}"> <i class="icon icon-double-angle-down"/>{{title}}</a></li>
         {{/documents}}
     </ul>
     {{/asset}}
@@ -146,7 +146,7 @@
     <ul class="documents">
         {{#documents}}
         {{!-- The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-        <li><a href="{{original_url}}"> <i class="icon icon-download-alt"/>{{title}}</a></li>
+        <li><a href="{{original_url}}"> <i class="icon icon-double-angle-down"/>{{title}}</a></li>
         {{/documents}}
     </ul>
     {{/asset}}
@@ -158,7 +158,7 @@
     <ul class="documents">
         {{#documents}}
         {{!-- The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-        <li><a href="{{original_url}}"> <i class="icon icon-download-alt"/>{{title}}</a></li>
+        <li><a href="{{original_url}}"> <i class="icon icon-double-angle-down"/>{{title}}</a></li>
         {{/documents}}
     </ul>
     {{/asset}}
@@ -172,7 +172,7 @@
     <ul class="documents">
         {{#documents}}
         {{!-- The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-        <li><a href="{{original_url}}"><i class="icon icon-download-alt"/>{{title}}</a></li>
+        <li><a href="{{original_url}}"><i class="icon icon-double-angle-down"/>{{title}}</a></li>
         {{/documents}}
     </ul>
     {{/asset}}
@@ -186,21 +186,20 @@
     {{/asset}}
 
     {{#asset "embedgroup" size="2" width="500"}}
+        {{{title}}}
+        {{{description}}}
     {{#embeds}}
     <div class="embed">{{{html}}}</div>
     {{/embeds}}
-    <div class="floated-parent-for-embedgroup-texts">
-        {{{title}}}
-        {{{description}}}
-    </div>
+
     {{/asset}}
 
     {{#asset "embedgroup" size="3" width="350"}}
+    {{{title}}}
+    {{{description}}}
     {{#embeds}}
     <div class="embed">{{{html}}}</div>
     {{/embeds}}
-    {{{title}}}
-    {{{description}}}
     {{/asset}}
 
     {{#asset "embedgroup" size="4" width="250"}}
