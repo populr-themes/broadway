@@ -92,8 +92,8 @@ body {
   font-size: @medium-headline;
   text-shadow: 2px 3px 1px rgba(0,0,0,.3);
   line-height: 1.5;
-  padding-top: 5px;
-  padding-bottom: 20px;
+//  padding-top: 5px;
+  padding-bottom: 10px;
 
   .font-size-larger {
     font-size: @large-headline;
@@ -104,7 +104,7 @@ body {
 
   .asset-size-1 & {
     font-size: @medium-headline*1+8;
-    padding: 40px 0 15px;
+    padding-bottom :15px;
 
     .font-size-larger {
       font-size: @large-headline*1+8;
@@ -271,16 +271,20 @@ body {
   }
 }
 
-//default padding for asset inner
-.asset-inner {
+//default padding settings for assets
+.asset {
+  padding-top: 20px;
   padding-bottom: 20px;
+.asset-inner {
+//  padding-bottom: 20px;
+}
 }
 
-//bordering the assets
+//border of the the assets
 //top border for assets
 .columnizer-row-inner {
   border-top: 3px solid #292929;
-  padding-top: 15px;
+//  padding-top: 15px;
 
   .columnizer-row-contents-imagegroup & {
     border-top: none;
@@ -317,8 +321,7 @@ body {
 .asset-type-text {
 
   &.asset-size-1 {
-    padding-right: 2px;
-    padding-left: 2px;
+    padding: 40px 20px 20px;
     border-top: none;
     background-color: #ebe9e4 !important;
     .description, .body, .description li, .body li, {
@@ -352,6 +355,8 @@ body {
 //special border at top for size1 image with only one image within
 .one-image {
   border-top: 3px solid #292929;
+  padding-top:20px;
+  margin-top: -20px;
 }
 
 .asset-type-imagegroup {
@@ -420,7 +425,7 @@ body {
       height: 280px;
       width: 50%;
       position: absolute;
-      top: 0;
+      top: 20px;
       right: 0;
       background-color: white;
       background-color: rgba(255, 255, 255, 0.7);
@@ -476,8 +481,9 @@ body {
 
 // Document asset styling
 .asset-type-documentgroup {
-  padding-right: 2px;
-  padding-left: 2px;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   background-color: #EBE9E4 !important;
 
@@ -578,7 +584,7 @@ body {
   #populr > .mobile-reset();
 
   // Edit the grid for mobile
-  .columnizer-row-inner, #pop-title {
+  .columnizer-row-inner {
 //    max-width: 640px;
     max-width: 80%;
   }
@@ -646,8 +652,8 @@ body {
         }
       }
       .floated-parent-for-imagegroup-texts {
-        height: 320px;
-        padding : 0 10px;
+        height: 280px;
+//        padding : 0 10px;
 
       }
     }
@@ -758,9 +764,9 @@ body {
         }
       }
       .floated-parent-for-imagegroup-texts {
-        overflow: hidden;
-        height: 320px;
-        padding : 0 10px;
+//        overflow: hidden;
+        height: 280px;
+//        padding : 0 10px;
 
       }
     }
