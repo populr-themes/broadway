@@ -416,26 +416,40 @@ body {
   }
 
   &.asset-size-2 {
+    min-height: 300px;
 
     color: #111;
-    height: 320px !important;
-    .slideshow {
-      height: 320px !important;
+//    height: 300px !important;
+    .populr-image-slider {
+      margin-top: 8px;
+      float:left;
+      width: 50% !important;
 
+      .slideshow {
+      height: 300px !important;
+      .slide {
+        height: 300px !important;
+        img {
+          height: 300px !important;
+
+        }
+      }
+
+    }
     }
 
     .floated-parent-for-imagegroup-texts {
-      padding: 20px;
-      height: 280px;
-      width: 50%;
-      position: absolute;
-      top: 20px;
-      right: 0;
-      background-color: white;
-      background-color: rgba(255, 255, 255, 0.7);
-      z-index: 9999;
-      overflow-y: scroll;
-
+//      padding: 20px;
+//      height: 280px;
+      width: 45%;
+      float: right;
+//      position: absolute;
+//      top: 20px;
+//      right: 0;
+//      background-color: white;
+//      background-color: rgba(255, 255, 255, 0.7);
+//      z-index: 9999;
+//      overflow-y: scroll;
 
     }
 
@@ -633,9 +647,12 @@ body {
   #pop img:not(.populr-mobile-noresize):not(#background-image) {
     height: 100% !important;
   }
+
+//  .asset-size-2 .asset-type-imagegroup .populr-image-slider .slideshow .slide img { width: 50px }
   .asset-type-imagegroup {
     &.asset-size-1 {
       .slideshow {
+
         margin-top: 30px;
         height: 350px !important;
         div.slide {
@@ -648,21 +665,36 @@ body {
       }
     }
     &.asset-size-2 {
-      margin-bottom: 20px;
 
+      min-height: 340px;
+      margin-bottom: 20px;
+      div.populr-image-slider {
+
+
+        width: 50% !important;
       .slideshow {
+        width: 50% !important;
         height: 320px !important;
-        div.slide {
+        .slide {
+//          width: 50% !important;
           height: 320px !important;
           img {
-                height: 320px !important;
+            width: 50% !important;
+            height: 320px !important;
 
           }
         }
       }
+        div.enabled {
+          width :50% !important;
+        }
+      }
       .floated-parent-for-imagegroup-texts {
-        height: 280px;
-//        padding : 0 10px;
+        height: 329px;
+        overflow-y: scroll;
+        position: absolute;
+        top :20px;
+        right:0;
 
       }
     }
