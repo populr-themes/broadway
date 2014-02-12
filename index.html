@@ -100,23 +100,21 @@
     {{/asset}}
 
     {{#asset "imagegroup" size="2"}}
-
-    {{#if_or title_visible description_visible}}
     {{#if lightbox_enabled }}
-    <i class="icon icon-plus" />
+        <div class="hover-icon"><i class="icon icon-plus" /></div>
     {{/if}}
-    {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="250" height="320" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-    <div class="floated-parent-for-imagegroup-texts">
+    {{#if_or title_visible description_visible}}
+        <div class="left">
+        {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+        </div>
+        <div class="floated-parent-for-imagegroup-texts">
+            {{{title}}}
+            {{{description}}}
+        </div>
+    {{else}}
+        {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
         {{{title}}}
         {{{description}}}
-    </div>
-    {{else}}
-    {{#if lightbox_enabled }}
-    <i class="icon icon-plus"/i>
-    {{/if}}
-    {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="500" height="320" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-    {{{title}}}
-    {{{description}}}
     {{/if_or}}
 
     {{/asset}}

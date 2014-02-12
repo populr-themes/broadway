@@ -90,7 +90,7 @@ body {
 
   font-family: @headline-font-family;
   font-size: @medium-headline;
-  text-shadow: 2px 3px 1px rgba(0,0,0,.3);
+  text-shadow: 2px 1px 1px rgba(0,0,0,.3);
   line-height: 1.5;
 //  padding-top: 5px;
   padding-bottom: 10px;
@@ -359,6 +359,15 @@ body {
   margin-top: -20px;
 }
 
+.hover-icon {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  z-index: 2000;
+  color: white;
+  i { font-style: normal !important; }
+}
+
 .asset-type-imagegroup {
   .populr-image-slider  .slideshow {
     overflow: visible;
@@ -410,39 +419,21 @@ body {
 
   &.asset-size-1 {
     .slideshow {
-      height: 500px !important;
       margin-top: 30px;
     }
   }
 
   &.asset-size-2 {
-    min-height: 300px;
-
+    .left { width: 47%; }
     color: #111;
 //    height: 300px !important;
-    .populr-image-slider {
-      margin-top: 8px;
-      float:left;
-      width: 50% !important;
-
-      .slideshow {
-      height: 300px !important;
-      .slide {
-        height: 300px !important;
-        img {
-          height: 300px !important;
-
-        }
-      }
-
-    }
-    }
-
     .floated-parent-for-imagegroup-texts {
 //      padding: 20px;
 //      height: 280px;
-      width: 45%;
-      float: right;
+      width: 49%;
+      position: absolute;
+      top: 20px;
+      right: 0;
 //      position: absolute;
 //      top: 20px;
 //      right: 0;
@@ -455,47 +446,10 @@ body {
 
 
   }
-  &.asset-size-3 {
-    .slideshow {
-      height: 270px !important;
-    }
-  }
-  &.asset-size-4 {
-    .slideshow {
-      height: 200px !important;
-    }
-
-  }
 }
 
 //Embed asset styling
-.asset-type-embedgroup {
 
-  &.asset-size-1 {
-    .embed div.height-conformed {
-    height: 500px !important;
-  }
-  }
-  &.asset-size-2 {
-    .embed  div.height-conformed {
-      height: 320px !important;
-    }
-
-
-  }
-  &.asset-size-3 {
-    .embed  div.height-conformed {
-      height: 270px !important;
-    }
-
-  }
-  &.asset-size-4 {
-
-   .embed div.height-conformed {
-      height: 200px !important;
-    }
-  }
-}
 
 // Document asset styling
 .asset-type-documentgroup {
@@ -644,9 +598,9 @@ body {
   }
 
 //  fixes on image assets
-  #pop img:not(.populr-mobile-noresize):not(#background-image) {
-    height: 100% !important;
-  }
+  // #pop img:not(.populr-mobile-noresize):not(#background-image) {
+  //   height: 100% !important;
+  // }
 
 //  .asset-size-2 .asset-type-imagegroup .populr-image-slider .slideshow .slide img { width: 50px }
   .asset-type-imagegroup {
@@ -654,103 +608,21 @@ body {
       .slideshow {
 
         margin-top: 30px;
-        height: 350px !important;
-        div.slide {
-          height: 350px !important;
-          img {
-            height: 350px !important;
-
-          }
-        }
       }
     }
     &.asset-size-2 {
 
-      min-height: 340px;
       margin-bottom: 20px;
-      div.populr-image-slider {
 
-
-//        width: 50% !important;
-      .slideshow {
-//        width: 50% !important;
-        height: 320px !important;
-        .slide {
-//          width: 50% !important;
-          height: 320px !important;
-          img {
-//            width: 50% !important;
-            height: 320px !important;
-
-          }
-        }
-      }
-
-      }
       .floated-parent-for-imagegroup-texts {
-        height: 329px;
-        overflow-y: scroll;
         position: absolute;
         top :20px;
         right:0;
 
       }
     }
-    &.asset-size-3 {
-      .slideshow {
-        height: 300px !important;
-        div.slide {
-          height: 300px !important;
-          img {
-            height: 300px !important;
-
-          }
-        }
-      }
-    }
-    &.asset-size-4 {
-      .slideshow {
-        height: 300px !important;
-        div.slide {
-          height: 300px !important;
-          img {
-            height: 300px !important;
-          }
-        }
-      }
-    }
-
   }
 //  embed assets styling
-  .asset-type-embedgroup {
-
-    &.asset-size-1 {
-      .embed div.height-conformed {
-        height: 350px !important;
-      }
-    }
-    &.asset-size-2 {
-      .embed  div.height-conformed {
-        height: 300px !important;
-      }
-
-
-
-
-    }
-    &.asset-size-3 {
-      .embed  div.height-conformed {
-        height: 300px !important;
-      }
-
-    }
-    &.asset-size-4 {
-
-      .embed div.height-conformed {
-        height:300px !important;
-      }
-    }
-  }
 
 }
 
@@ -776,95 +648,19 @@ body {
   }
 //  image assets styling
   .asset-type-imagegroup {
-    &.asset-size-1 {
-      .slideshow {
-        margin-top: 25px;
-        height: 250px !important;
-        div.slide {
-          height: 250px !important;
-          img {
-            height: 250px !important;
-
-          }
-        }
-      }
-    }
     &.asset-size-2 {
       margin-bottom: 20px;
-
-      .slideshow {
-        height: 320px !important;
-        div.slide {
-          height: 320px !important;
-          img {
-            height: 320px !important;
-
-          }
-        }
-      }
       .floated-parent-for-imagegroup-texts {
 //        overflow: hidden;
-        height: 280px;
 //        padding : 0 10px;
 
       }
     }
-    &.asset-size-3 {
-      .slideshow {
-        height: 250px !important;
-        div.slide {
-          height: 250px !important;
-          img {
-            height: 250px !important;
-
-          }
-        }
-      }
-    }
-    &.asset-size-4 {
-      .slideshow {
-        height: 250px !important;
-        div.slide {
-          height: 250px !important;
-          img {
-            height: 250px !important;
-          }
-        }
-      }
-    }
-
   }
   //end of image asset styling
 
   //  embed assets styling
   .asset-type-embedgroup {
-
-    &.asset-size-1 {
-      .embed div.height-conformed {
-        height: 250px !important;
-      }
-    }
-    &.asset-size-2 {
-
-      .embed  div.height-conformed {
-        height: 200px !important;
-      }
-
-
-
-    }
-    &.asset-size-3 {
-      .embed  div.height-conformed {
-        height:250px !important;
-      }
-
-    }
-    &.asset-size-4 {
-
-      .embed div.height-conformed {
-        height:250px !important;
-      }
-    }
   }
   //end of embed asset styling
 
