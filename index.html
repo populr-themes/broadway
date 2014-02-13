@@ -120,19 +120,37 @@
     {{/asset}}
 
     {{#asset "imagegroup" size="2"}}
-    {{#if lightbox_enabled }}
-        <div class="hover-icon"><i class="icon icon-plus" /></div>
-    {{/if}}
+
     {{#if_or title_visible description_visible}}
         <div class="left">
-        {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+
+            {{#if lightbox_enabled}}
+            <div class="my-lightbox-parent">
+                <div class="my-center">
+                    <span><i class="icon icon-plus"/></span>
+                </div>
+                {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+            </div>
+            {{else}}
+            {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+            {{/if}}
         </div>
         <div class="floated-parent-for-imagegroup-texts">
             {{{title}}}
             {{{description}}}
         </div>
     {{else}}
+
+    {{#if lightbox_enabled}}
+    <div class="my-lightbox-parent">
+        <div class="my-center">
+            <span><i class="icon icon-plus"/></span>
+        </div>
         {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+    </div>
+    {{else}}
+    {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+    {{/if}}
         {{{title}}}
         {{{description}}}
     {{/if_or}}
