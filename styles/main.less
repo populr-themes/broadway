@@ -349,6 +349,47 @@ body {
 }
 
 // Image asset styling
+
+.my-lightbox-parent{
+  .populr-image-slider{
+    z-index:15;
+  }
+  overflow: hidden;
+  position: relative;
+  .my-center{
+    position: absolute;
+    display: table;
+    width:100%;
+    margin-top: -30px ;
+    padding:0;
+    top:50%;
+    left:0;
+    text-align: center;
+    z-index:10;
+    span{
+      padding:20px;
+      height:20px;
+      width:20px;
+      .opacity(0);
+      display: inline-block;
+      .border-radius(100%);
+      background-color:@link-color;
+      .icon{
+        position: relative;
+        top: -2px;
+        left: 1px;
+        text-align: center;
+        color: white;
+        font-size:25px;
+        font-style: normal!important;
+
+      }
+    }
+  }
+  &:hover .populr-image-slider{.opacity(30)}
+  &:hover span{.opacity(70)}
+}
+
 #populr > #image-slider-themes > .basic();
 
 //special border at top for size1 image with only one image within
@@ -358,7 +399,7 @@ body {
   margin-top: -20px;
 }
 
-.hover-icon {
+/*.hover-icon {
   position: absolute;
   left: 22%;
   top: 38%;
@@ -368,7 +409,7 @@ body {
     font-style: normal !important;
   }
   visibility: hidden;
-}
+}*/
 
 .asset-type-imagegroup {
   .populr-image-slider .slideshow {
