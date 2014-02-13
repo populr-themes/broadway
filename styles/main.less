@@ -414,21 +414,12 @@ body {
 
 .asset-type-imagegroup {
   .populr-image-slider .slideshow {
-    overflow: visible;
+    overflow: hidden;
     width: 100% !important;
     .slide {
       width: 100% !important;
-      .fancybox {
-        cursor: pointer;
-        width: 100%;
-      }
       img {
         width: 100% !important;
-        :hover {
-          .hover-icon {
-            visibility: visible;
-          }
-        }
       }
     }
 
@@ -492,9 +483,7 @@ body {
 
   }
   &.asset-size-4 {
-    .my-lightbox-parent {
-      height: 200px !important;
-    }
+
   }
 }
 
@@ -585,12 +574,12 @@ body {
   bottom: 0;
   right: 0;
   width: 50px;
-  margin-left: 0;
-  margin-right: 0;
+
   background-color: #333;
   background-color: rgba(0, 0, 0, .5);
   padding-bottom: 10px;
   z-index: 200;
+  margin: 0 0;
 
   // webicon styling
   .populr-webicon {

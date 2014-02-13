@@ -9,7 +9,8 @@
 // });
 
 (function() {
-    if ( $(window).width() > 960) {
+    if ( $(window).width() > 960)
+ {
 
 
     var fixColumnHeights;
