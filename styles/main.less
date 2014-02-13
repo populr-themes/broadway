@@ -57,17 +57,17 @@ body {
   }
 
   a {
-        color: @link-color;
-        text-decoration: none;
+    color: @link-color;
+    text-decoration: none;
 
-    &:active,&:hover {
-            color: darken(@link-color, 20%);
+    &:active, &:hover {
+      color: darken(@link-color, 20%);
 
     }
 
   }
   .link-btn {
-//    background-color: #292929 !important;
+    //    background-color: #292929 !important;
     border-radius: 0 !important;
     font-style: normal;
     font-size: 15px;
@@ -90,9 +90,9 @@ body {
 
   font-family: @headline-font-family;
   font-size: @medium-headline;
-  text-shadow: 2px 1px 1px rgba(0,0,0,.3);
+  text-shadow: 2px 1px 1px rgba(0, 0, 0, .3);
   line-height: 1.5;
-//  padding-top: 5px;
+  //  padding-top: 5px;
   padding-bottom: 10px;
 
   .font-size-larger {
@@ -104,7 +104,7 @@ body {
 
   .asset-size-1 & {
     font-size: @medium-headline*1+8;
-    padding-bottom :15px;
+    padding-bottom: 15px;
 
     .font-size-larger {
       font-size: @large-headline*1+8;
@@ -229,7 +229,6 @@ body {
 
 // Assets
 
-
 ////////todo cleanup asset temp bg todo cleanup
 ////
 //
@@ -275,16 +274,16 @@ body {
 .asset {
   padding-top: 20px;
   padding-bottom: 20px;
-.asset-inner {
-//  padding-bottom: 20px;
-}
+  .asset-inner {
+    //  padding-bottom: 20px;
+  }
 }
 
 //border of the the assets
 //top border for assets
 .columnizer-row-inner {
   border-top: 3px solid #292929;
-//  padding-top: 15px;
+  //  padding-top: 15px;
 
   .columnizer-row-contents-imagegroup & {
     border-top: none;
@@ -355,7 +354,7 @@ body {
 //special border at top for size1 image with only one image within
 .one-image {
   border-top: 3px solid #292929;
-  padding-top:20px;
+  padding-top: 20px;
   margin-top: -20px;
 }
 
@@ -365,12 +364,14 @@ body {
   top: 38%;
   z-index: 2000;
   color: white;
-  i { font-style: normal !important; }
+  i {
+    font-style: normal !important;
+  }
   visibility: hidden;
 }
 
 .asset-type-imagegroup {
-  .populr-image-slider  .slideshow {
+  .populr-image-slider .slideshow {
     overflow: visible;
     width: 100% !important;
     .slide {
@@ -383,7 +384,7 @@ body {
         width: 100% !important;
         :hover {
           .hover-icon {
-            visibility:  visible;
+            visibility: visible;
           }
         }
       }
@@ -394,7 +395,7 @@ body {
       z-index: 2000;
       #populr > .text-color-over-color(@custom-color); //bullet color
       background: #11;
-      background-color: rgba(0,0,0, 0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       padding: 2px 12px;
       position: absolute;
       bottom: 30px;
@@ -408,7 +409,7 @@ body {
         -moz-transform: scale(.8);
         -ms-transform: scale(.8);
         -o-transform: scale(.8);
-       transform: scale(.8);
+        transform: scale(.8);
 
       }
       span.cycle-pager-active {
@@ -418,10 +419,10 @@ body {
       }
     }
   }
-  .lt-ie9 .cycle-pager { display: none; }
+  .lt-ie9 .cycle-pager {
+    display: none;
+  }
   //    end line of bullet
-
-
 
   &.asset-size-1 {
     .slideshow {
@@ -430,36 +431,27 @@ body {
   }
 
   &.asset-size-2 {
-    height:auto !important;
-    .left { width: 47%; }
+
+    .left {
+      width: 47%;
+    }
     color: #111;
-//    height: 300px !important;
+
     .floated-parent-for-imagegroup-texts {
-//      padding: 20px;
-//      height: 280px;
-      height:320px;
+
+      height: 300px;
       width: 49%;
       position: absolute;
       top: 20px;
       right: 0;
-//      position: absolute;
-//      top: 20px;
-//      right: 0;
-//      background-color: white;
-//      background-color: rgba(255, 255, 255, 0.7);
-//      z-index: 9999;
       overflow-y: scroll;
 
-
-
     }
-
 
   }
 }
 
 //Embed asset styling
-
 
 // Document asset styling
 .asset-type-documentgroup {
@@ -479,7 +471,7 @@ body {
   .centered-icon {
     text-align: center;
     width: auto;
-    color:#666;
+    color: #666;
   }
 
   .documents {
@@ -514,18 +506,18 @@ body {
   bottom: 0;
   right: 0;
   width: 50px;
-  margin-left:0;
-  margin-right:0;
+  margin-left: 0;
+  margin-right: 0;
   background-color: #333;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, .5);
   padding-bottom: 10px;
 
-// webicon styling
-.populr-webicon {
-  box-shadow: none !important;
-  border-radius: 0 !important;;
-  margin-top: 10px;
-}
+  // webicon styling
+  .populr-webicon {
+    box-shadow: none !important;
+    border-radius: 0 !important;;
+    margin-top: 10px;
+  }
 
 }
 
@@ -567,9 +559,10 @@ body {
 
   // Edit the grid for mobile
   .columnizer-row-inner {
-//    max-width: 640px;
+    //    max-width: 640px;
     max-width: 80%;
   }
+
   .columnizer-row-inner div:last-child {
     margin-bottom: 0 !important;
   }
@@ -598,8 +591,8 @@ body {
     font-size: 14px !important;
     i.icon {
       font-size: 20px;
-      padding-right:10px ;
-      padding-left:10px ;
+      padding-right: 10px;
+      padding-left: 10px;
     }
   }
 
@@ -607,12 +600,11 @@ body {
     text-align: left !important;
   }
 
-//  fixes on image assets
+  //  fixes on image assets
   // #pop img:not(.populr-mobile-noresize):not(#background-image) {
   //   height: 100% !important;
   // }
-
-//  .asset-size-2 .asset-type-imagegroup .populr-image-slider .slideshow .slide img { width: 50px }
+  //  .asset-size-2 .asset-type-imagegroup .populr-image-slider .slideshow .slide img { width: 50px }
   .asset-type-imagegroup {
     &.asset-size-1 {
       .slideshow {
@@ -626,19 +618,19 @@ body {
 
       .floated-parent-for-imagegroup-texts {
         position: absolute;
-        top :20px;
-        right:0;
+        top: 20px;
+        right: 0;
         height: 340px;
 
       }
     }
   }
-//  embed assets styling
+
+  //  embed assets styling
 
 }
 
 @media screen and (max-width: 600px) {
-
 
   #container-for-logo-title {
     width: 100%;
@@ -657,23 +649,25 @@ body {
   .asset-title {
     font-size: 20px !important;
   }
-//  image assets styling
+
+  //  image assets styling
   .asset-type-imagegroup {
     &.asset-size-2 {
       margin-bottom: 20px;
       .floated-parent-for-imagegroup-texts {
-//        overflow: hidden;
-//        padding : 0 10px;
+        //        overflow: hidden;
+        //        padding : 0 10px;
         height: 200px;
 
       }
     }
   }
-  //end of image asset styling
 
+  //end of image asset styling
   //  embed assets styling
   .asset-type-embedgroup {
   }
+
   //end of embed asset styling
 
 }
