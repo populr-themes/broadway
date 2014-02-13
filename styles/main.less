@@ -373,7 +373,7 @@ body {
       .opacity(0);
       display: inline-block;
       .border-radius(100%);
-      background-color:@link-color;
+      background-color:darken(@link-color,20%);
       .icon{
         position: relative;
         top: -2px;
@@ -386,8 +386,8 @@ body {
       }
     }
   }
-  &:hover .populr-image-slider{.opacity(30)}
-  &:hover span{.opacity(70)}
+  &:hover .populr-image-slider{.opacity(70)}
+  &:hover span{.opacity(1)}
 }
 
 #populr > #image-slider-themes > .basic();

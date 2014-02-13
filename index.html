@@ -87,13 +87,33 @@
     {{{title}}}
     {{{description}}}
 
+
+    {{#if lightbox_enabled}}
+    <div class="my-lightbox-parent">
+        <div class="my-center">
+            <span><i class="icon icon-plus"/></span>
+        </div>
+        {{{imageslider images src="{{{resize original_url width=1180 height=500}}}" width="1180" height="500" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+    </div>
+    {{else}}
     {{{imageslider images src="{{{resize original_url width=1180 height=500}}}" width="1180" height="500" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+    {{/if}}
     {{else}}
     <!-- display single image -->
     <div class="one-image">
         {{{title}}}
         {{{description}}}
+
+        {{#if lightbox_enabled}}
+        <div class="my-lightbox-parent">
+            <div class="my-center">
+                <span><i class="icon icon-plus"/></span>
+            </div>
+            {{{imageslider images src="{{{resize original_url width=1180 height=500}}}" width="1180" height="500" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+        </div>
+        {{else}}
         {{{imageslider images src="{{{resize original_url width=1180 height=500}}}" width="1180" height="500" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+        {{/if}}
     </div>
     {{/if_many}}
 
@@ -136,7 +156,17 @@
     {{/asset}}
 
     {{#asset "imagegroup" size="4"}}
+    {{#if lightbox_enabled}}
+    <div class="my-lightbox-parent">
+        <div class="my-center">
+            <span><i class="icon icon-plus"/></span>
+        </div>
+        {{{imageslider images src="{{{resize original_url width=250 height=200}}}" width="250" height="200" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+    </div>
+    {{else}}
     {{{imageslider images src="{{{resize original_url width=250 height=200}}}" width="250" height="200" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+    {{/if}}
+
     {{{title}}}
     {{{description}}}
     {{/asset}}
