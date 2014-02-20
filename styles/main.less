@@ -416,7 +416,7 @@ body {
   .lt-ie9 .cycle-pager {
     display: none;
   }
-  
+
   .populr-image-slider .slideshow {
     overflow: hidden;
     width: 100% !important;
@@ -650,7 +650,7 @@ body {
     padding-left:12%;
     padding-right: 12%;
     #pop-logo {
-      margin:0 0;
+      margin:0 auto;
     }
     #pop-title {
       padding-top:20px;
@@ -682,15 +682,10 @@ body {
     text-align: left !important;
   }
 
-  //  fixes on image assets
-  // #pop img:not(.populr-mobile-noresize):not(#background-image) {
-  //   height: 100% !important;
-  // }
-  //  .asset-size-2 .asset-type-imagegroup .populr-image-slider .slideshow .slide img { width: 50px }
+
   .asset-type-imagegroup {
     &.asset-size-1 {
       .slideshow {
-
         margin-top: 30px;
       }
     }
@@ -746,7 +741,6 @@ body {
     #pop-logo {
       margin-top: 35px;
       margin-bottom: 0;
-//      margin-left: 2.5%;
       text-align: left;
 
     }
@@ -760,7 +754,19 @@ body {
   }
 
   //  image assets styling
+  .asset-type-imagegroup {
+    &.asset-size-2 {
+      .left {
+        width:100%;
+        float:none;
+      }
+      .floated-parent-for-imagegroup-texts {
+        width:100%;
+        float:none;
+      }
+    }
 
+  }
 
   //end of image asset styling
   //  embed assets styling
