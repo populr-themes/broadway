@@ -32,7 +32,7 @@
     -->
     <!-- <meta itemprop="palette" content="palette-default" title="Default" data-preview="#fff,#000"> -->
     <!--<meta itemprop="palette" content="palette-custom" data-preview="custom">-->
-    <meta itemprop="palette" content="palette-default" title="Default" data-preview="#F7F6F0,#F15A23">
+    <meta itemprop="palette" content="palette-default" title="Default" data-preview="#D03737">
     <meta itemprop="palette" content="palette-custom" title="Custom" data-preview="custom">
 
 
@@ -53,7 +53,7 @@
 <script id="theme" type="text/x-handlebars-template">
 {{pop_links}}
     <div id="container-for-logo-title">
-        {{logo max_width=123 max_height=35}}
+        <div id="logo-box">{{logo max_width=130 max_height=75}}</div>
 
         {{{title}}}
     </div>
@@ -94,10 +94,10 @@
         <div class="my-center">
             <span><i class="icon icon-plus"/></span>
         </div>
-        {{{imageslider images src="{{{resize original_url width=1180 height=500}}}" width="1180" height="500" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+        {{{imageslider images width="1180" height="400" crop_single=true prevnext-enabled=false pager-enabled=true}}}
     </div>
     {{else}}
-    {{{imageslider images src="{{{resize original_url width=1180 height=500}}}" width="1180" height="500" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+    {{{imageslider images width="1180" height="400" crop_single=true prevnext-enabled=false pager-enabled=true}}}
     {{/if}}
     {{else}}
     <!-- display single image -->
@@ -110,10 +110,10 @@
             <div class="my-center">
                 <span><i class="icon icon-plus"/></span>
             </div>
-            {{{imageslider images src="{{{resize original_url width=1180 height=500}}}" width="1180" height="500" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+            {{{imageslider images width="1180" height="400" crop_single=true prevnext-enabled=false pager-enabled=true}}}
         </div>
         {{else}}
-        {{{imageslider images src="{{{resize original_url width=1180 height=500}}}" width="1180" height="500" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+        {{{imageslider images width="1180" height="400" crop_single=true prevnext-enabled=false pager-enabled=true}}}
         {{/if}}
     </div>
     {{/if_many}}
@@ -122,95 +122,92 @@
 
     {{#asset "imagegroup" size="2"}}
 
-    {{#if_or title_visible description_visible}}
-        <div class="left">
+        {{#if_or title_visible description_visible}}
+            <div class="left">
 
-            {{#if lightbox_enabled}}
-            <div class="my-lightbox-parent">
-                <div class="my-center">
-                    <span><i class="icon icon-plus"/></span>
+                {{#if lightbox_enabled}}
+                <div class="my-lightbox-parent">
+                    <div class="my-center">
+                        <span><i class="icon icon-plus"/></span>
+                    </div>
+                    {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
                 </div>
+                {{else}}
                 {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+                {{/if}}
             </div>
-            {{else}}
-            {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-            {{/if}}
+            <div class="floated-parent-for-imagegroup-texts">
+                {{{title}}}
+                {{{description}}}
+            </div>
+        {{else}}
+
+        {{#if lightbox_enabled}}
+        <div class="my-lightbox-parent">
+            <div class="my-center">
+                <span><i class="icon icon-plus"/></span>
+            </div>
+            {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
         </div>
-        <div class="floated-parent-for-imagegroup-texts">
+        {{else}}
+        {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+        {{/if}}
             {{{title}}}
             {{{description}}}
-        </div>
-    {{else}}
-
-    {{#if lightbox_enabled}}
-    <div class="my-lightbox-parent">
-        <div class="my-center">
-            <span><i class="icon icon-plus"/></span>
-        </div>
-        {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-    </div>
-    {{else}}
-    {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-    {{/if}}
-        {{{title}}}
-        {{{description}}}
-    {{/if_or}}
+        {{/if_or}}
 
     {{/asset}}
+
 
     {{#asset "imagegroup" size="3"}}
-    {{{title}}}
-    {{{description}}}
-    {{#if lightbox_enabled}}
-    <div class="my-lightbox-parent">
-        <div class="my-center">
-            <span><i class="icon icon-plus"/></span>
+        {{{title}}}
+        {{#if lightbox_enabled}}
+        <div class="my-lightbox-parent">
+            <div class="my-center">
+                <span><i class="icon icon-plus"/></span>
+            </div>
+            {{{imageslider images src="{{{resize original_url width=350 height=270}}}" width="350" height="270" crop_single=true prevnext-enabled=false pager-enabled=true}}}
         </div>
+        {{else}}
         {{{imageslider images src="{{{resize original_url width=350 height=270}}}" width="350" height="270" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-    </div>
-    {{else}}
-    {{{imageslider images src="{{{resize original_url width=350 height=270}}}" width="350" height="270" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-    {{/if}}
+        {{/if}}
+        {{{description}}}
 
     {{/asset}}
+
 
     {{#asset "imagegroup" size="4"}}
-    {{#if lightbox_enabled}}
-    <div class="my-lightbox-parent">
-        <div class="my-center">
-            <span><i class="icon icon-plus"/></span>
+        {{{title}}}
+        {{#if lightbox_enabled}}
+        <div class="my-lightbox-parent">
+            <div class="my-center">
+                <span><i class="icon icon-plus"/></span>
+            </div>
+            {{{imageslider images src="{{{resize original_url width=250 height=200}}}" width="250" height="200" crop_single=true prevnext-enabled=false pager-enabled=true data-cycle-auto-height="250:200"}}}
         </div>
-        {{{imageslider images src="{{{resize original_url width=250 height=200}}}" width="250" height="200" crop_single=true prevnext-enabled=false pager-enabled=true data-cycle-auto-height="250:200"}}}
-    </div>
-    {{else}}
-    {{{imageslider images src="{{{resize original_url width=250 height=200}}}" width="250" height="200" crop_single=true prevnext-enabled=false pager-enabled=true }}}
-    {{/if}}
+        {{else}}
+        {{{imageslider images src="{{{resize original_url width=250 height=200}}}" width="250" height="200" crop_single=true prevnext-enabled=false pager-enabled=true }}}
+        {{/if}}
 
-    {{{title}}}
-    {{{description}}}
-    {{/asset}}
+        {{{description}}}
+        {{/asset}}
 
-    {{#asset "documentgroup" size="1"}}
-    <!--changing the icon position-->
-    <div class="centered-icon"><i class="icon icon-file"/></div>
-    {{{title}}}
-    {{{description}}}
-    <ul class="documents">
-        {{#documents}}
-        {{!-- The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
-        <li><a href="{{original_url}}"> <i class="icon icon-double-angle-down"/>{{title}}</a></li>
-        {{/documents}}
-    </ul>
+        {{#asset "documentgroup" size="1"}}
+        {{{title}}}
+        {{{description}}}
+        <ul class="documents">
+            {{#documents}}
+
+            <li><a href="{{original_url}}"> <i class="icon icon-double-angle-down"/>{{title}}</a></li>
+            {{/documents}}
+        </ul>
     {{/asset}}
 
     {{#asset "documentgroup" size="2"}}
-
-    <div class="centered-icon"><i class="icon icon-file"/></div>
     {{{title}}}
     {{{description}}}
     <ul class="documents">
         {{#documents}}
-        {{!-- The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
         <li><a href="{{original_url}}"> <i class="icon icon-double-angle-down"/>{{title}}</a></li>
         {{/documents}}
     </ul>
@@ -218,11 +215,9 @@
 
     {{#asset "documentgroup" size="3"}}
     {{{title}}}
-    <div class="centered-icon"><i class="icon icon-file"/></div>
     {{{description}}}
     <ul class="documents">
         {{#documents}}
-        {{!-- The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
         <li><a href="{{original_url}}"> <i class="icon icon-double-angle-down"/>{{title}}</a></li>
         {{/documents}}
     </ul>
@@ -230,13 +225,11 @@
 
     {{#asset "documentgroup" size="4"}}
     {{{title}}}
-    <div class="centered-icon"><i class="icon icon-file"/></div>
     <!--todo implement the idea of flexible icon-->
     <!--<div class="icon icon-custom">{{{description}}}</div>-->
     {{{description}}}
     <ul class="documents">
         {{#documents}}
-        {{!-- The i tag gets styled by Font Awesome, which Populr pulls in automatically. --}}
         <li><a href="{{original_url}}"><i class="icon icon-double-angle-down"/>{{title}}</a></li>
         {{/documents}}
     </ul>
