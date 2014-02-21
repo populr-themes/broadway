@@ -5,6 +5,9 @@
     $('body').removeClass('assets-resized'); // ie7
     if ($('html').css('content') == "\u2063") {
       $('#pop .asset').css('min-height', '');
+      if($.browser.msie && parseInt($.browser.version, 10) == 7) {
+        $('#pop .asset').css('height', '');
+      }
 
     } else {
       $('#pop').imagesLoaded(function() {
@@ -12,6 +15,9 @@
         $('#pop .asset').css('min-height', '');
         $('#pop .columnizer-row').each(function(idx, el) {
           $(this).find('.asset').css('min-height', $(this).height());
+          if($.browser.msie && parseInt($.browser.version, 10) == 7) {
+            $(this).find('.asset').css('height', $(this).height());
+          }
         });
       });
       $('body').addClass('assets-resized'); // ie7
@@ -23,6 +29,9 @@
     $('.columnizer-row .asset').live('initialize', _.throttle(fixColumnHeights));
     $('.columnizer-row .asset').live('destroy', function() {
       $(this).find('.asset').css('min-height', '');
+      if($.browser.msie && parseInt($.browser.version, 10) == 7) {
+        $('#pop .asset').css('height', '');
+      }
     });
   });
 
