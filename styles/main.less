@@ -648,32 +648,6 @@ body {
     }
   }
 
-  //  embed assets styling
-  .asset-type-embedgroup {
-
-    &.asset-size-1 {
-      .embed div.height-conformed {
-        height: 350px !important;
-      }
-    }
-    &.asset-size-2 {
-      .embed  div.height-conformed {
-        height: 300px !important;
-      }
-    }
-    &.asset-size-3 {
-      .embed  div.height-conformed {
-        height: 300px !important;
-      }
-
-    }
-    &.asset-size-4 {
-
-      .embed div.height-conformed {
-        height:300px !important;
-      }
-    }
-  }
 //  pop links styling
   #pop-links {
     padding-bottom: 10px;
@@ -687,7 +661,9 @@ body {
 @media screen and (max-width: 600px) {
 
   #container-for-logo-title {
-
+    width: 86%;
+    padding-left: 7%;
+    padding-right: 7%;
 
     #pop-logo {
       margin-top: 35px;
@@ -695,10 +671,12 @@ body {
       text-align: left;
 
     }
-//    #pop-title {
-//
-//    }
+
   }
+
+  .columnizer-row-inner { max-width: 95% !important; }
+
+  .asset { border-bottom: none !important; }
 
   .asset-title {
     font-size: 20px !important;
@@ -721,35 +699,6 @@ body {
 
   //end of image asset styling
   //  embed assets styling
-  .asset-type-embedgroup {
-
-    &.asset-size-1 {
-      .embed div.height-conformed {
-        height: 250px !important;
-      }
-    }
-    &.asset-size-2 {
-
-      .embed  div.height-conformed {
-        height: 200px !important;
-      }
-
-
-
-    }
-    &.asset-size-3 {
-      .embed  div.height-conformed {
-        height:250px !important;
-      }
-
-    }
-    &.asset-size-4 {
-
-      .embed div.height-conformed {
-        height:250px !important;
-      }
-    }
-  }
 
   //end of embed asset styling
 
