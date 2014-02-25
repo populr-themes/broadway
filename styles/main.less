@@ -63,6 +63,7 @@ body {
 
     &:active, &:hover {
       color: darken(@link-color, 20%);
+      transition: all 0.4s ease 0s;
 
     }
 
@@ -231,6 +232,7 @@ body {
   border-bottom: 1px solid #ccc;
   &:hover {
     border-bottom-color: @custom-color;
+    transition: all 0.4s ease 0s;
   }
   .ie7 & {
     border-bottom: none;
@@ -291,7 +293,10 @@ body {
       }
     }
   }
-  &:hover .populr-image-slider img{.opacity(30)}
+  &:hover .populr-image-slider img {
+    .opacity(30);
+    transition: all 0.4s ease 0s;
+    }
   &:hover span{.opacity(100)}
 }
 
@@ -317,7 +322,7 @@ body {
 }*/
 
 .asset-type-imagegroup {
-  .lt-ie9 .cycle-pager {
+  .lt-ie9 .cycle-pager,.my-center {
     display: none;
   }
 
