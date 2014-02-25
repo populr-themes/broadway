@@ -226,17 +226,17 @@ body {
   }
 }
 
-//thin border for all size4,3,2 assets
-.asset-size-4, .asset-size-3, .asset-size-2 {
+//thin border for all size4,3,2,1 assets
+.asset-size-4, .asset-size-3, .asset-size-2,.asset-size-1 {
   border-bottom: 1px solid #ccc;
   &:hover {
     border-bottom-color: @custom-color;
   }
+  .ie7 & {
+    border-bottom: none;
+  }
 }
 
-.asset-size-1 {
-  border-bottom: 1px solid #ccc;
-}
 
 //sleek border at the end of the page
 .columnizer-row:last-child .columnizer-row-inner {
@@ -291,7 +291,7 @@ body {
       }
     }
   }
-  &:hover .populr-image-slider{.opacity(70)}
+  &:hover .populr-image-slider{.opacity(30)}
   &:hover span{.opacity(100)}
 }
 
