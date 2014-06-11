@@ -52,8 +52,8 @@
      prevent issues with quote escaping and invalid markup. -->
 <script id="theme" type="text/x-handlebars-template">
 {{pop_links}}
-    <div id="container-for-logo-title">
-        <div id="logo-box">{{logo max_width=130 max_height=75}}</div>
+    <div id="container-for-logo-title" class="clearfix">
+        <div id="logo-box">{{logo max_width=160 max_height=125}}</div>
 
         {{{title}}}
     </div>
@@ -121,41 +121,18 @@
     {{/asset}}
 
     {{#asset "imagegroup" size="2"}}
-
-        {{#if_or title_visible description_visible}}
-            <div class="left">
-
-                {{#if lightbox_enabled}}
-                <div class="my-lightbox-parent">
-                    <div class="my-center">
-                        <span><i class="icon icon-plus"/></span>
-                    </div>
-                    {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-                </div>
-                {{else}}
-                {{{imageslider images src="{{{resize original_url width=250 height=300}}}" width="240" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-                {{/if}}
-            </div>
-            <div class="floated-parent-for-imagegroup-texts">
-                {{{title}}}
-                {{{description}}}
-            </div>
-        {{else}}
-
+        {{{title}}}
+        {{{description}}}
         {{#if lightbox_enabled}}
-        <div class="my-lightbox-parent">
-            <div class="my-center">
-                <span><i class="icon icon-plus"/></span>
+            <div class="my-lightbox-parent">
+                <div class="my-center">
+                    <span><i class="icon icon-plus"/></span>
+                </div>
+                {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
             </div>
-            {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
-        </div>
         {{else}}
-        {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
+            {{{imageslider images src="{{{resize original_url width=500 height=320}}}" width="530" height="240" crop_single=true prevnext-enabled=false pager-enabled=true}}}
         {{/if}}
-            {{{title}}}
-            {{{description}}}
-        {{/if_or}}
-
     {{/asset}}
 
 

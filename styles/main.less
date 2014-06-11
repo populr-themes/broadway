@@ -11,9 +11,6 @@
 @import 'preboot';
 @import '//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic)';
 
-body {
-  background: #e1e1e1 url('@{base-url}/images/kindajean.png') !important;
-}
 
 // Call preboot.less's reset to reduce browser inconsistencies
 #reset > .global-reset();
@@ -35,7 +32,7 @@ body {
 
 .pop-title-text() {
   font-family: @headline-font-family;
-  font-size: 32px;
+  font-size: 33px;
   line-height: 1.1;
 }
 
@@ -59,11 +56,10 @@ body {
 
   a {
     color: @link-color;
-    text-decoration: none;
 
     &:active, &:hover {
       color: darken(@link-color, 20%);
-
+      text-decoration: underline;
     }
 
   }
@@ -84,6 +80,10 @@ body {
   }
 }
 
+.pplr-icon a {
+  #populr > .text-color-over-color(@link-color);
+}
+
 //////Default styles for three font size classes to achieve consistency across assets
 ////
 //  size variables for headline fonts
@@ -91,21 +91,6 @@ body {
 @medium-headline: 20px;
 @small-headline: 16px;
 
-
-.asset-size-2, .asset-size-3, .asset-size-4 {
-  font-family: @headline-font-family;
-  line-height: 1.5;
-  .asset-title {
-    font-size: 16px;
-    line-height: 1.2;
-    color: #292929;
-    margin-bottom: 18px;
-    .font-size-larger {
-      font-size: 24px;
-      line-height: 1.5;
-    }
-  }
-}
 
 //  size variables for desc fonts
 @large-desc: 16px;
@@ -129,7 +114,9 @@ body {
 // Content wrapper
 #pop { margin-top: 10px; }
 #main-content {
-  margin: 0 auto;
+  margin: 0 auto 15px;
+  width: 1075px;
+  background: rgb(245, 245, 245);
 }
 
 //removing top padding from first child
@@ -140,42 +127,47 @@ body {
 }
 
 #container-for-logo-title {
-  background-color: rgba(247, 246, 240, 0.86);
-  width: 92%;
-  margin: 0 auto -20px;
+  width: 960px;
+  margin: 0 auto;
   padding-top: 30px;
+  border-bottom: 12px solid #292929;
   // Logo helper
   #logo-box {
-    width: 90%;
-    margin: 0 auto;
+    width: 220px;
+    float: left;
   }
   #pop-logo {
-    padding-top: 15px;
-    padding-bottom: 45px;
-    text-align: left;
-
+    padding: 50px 25px;
   }
 
   // Pop title
-
   #pop-title {
-    border-top: 6px solid #292929;
     .pop-title-text();
-    margin: 0 auto;
-    padding: 40px 0;
-    width: 90%;
-    margin: 0 auto;
-  }
+    margin: 40px auto 0;
+    width: 690px;
+    float: right;
+    padding: 50px 25px;
 
+    .font-size-smaller, .asset h2 .font-size-smaller {
+      font-size: 15px;
+      line-height: 19px;
+      display: block;
+    }
+  }
+}
+
+#container-for-logo-title > #pop-title {
+  width: 100%;
+  float: none;
+  padding: 50px 0;
 }
 
 // Assets
 
 //default background for all content
 #main-region {
-  width: 92%;
+  width: 960px;
   margin: 0 auto 10px;
-  background-color: rgba(247, 246, 240, 0.86);
   padding-bottom: 30px;
 
 }
@@ -194,27 +186,31 @@ body {
     list-style-type: decimal;
   }
 
-  .font-size-smaller { color: #444; }
+  .font-size-smaller {
+    color: #444;
+    font-size: 13px;
+  }
 }
 
-.asset-size-1 {
-  .asset-title {
-    font-size: 24px;
-    line-height: 1.4;
-    font-family: @headline-font-family;
-    .font-size-larger {
-      font-size: 40px;
-      line-height: 1.6;
-    }
+
+.asset-title {
+  font-size: 24px;
+  line-height: 1.4;
+  font-family: @headline-font-family;
+  .font-size-larger {
+    font-size: 40px;
+    line-height: 1.6;
   }
+}
+
+.asset h2 .font-size-smaller {
+  font-size: 18px;
 }
 
 
 //border of the the assets
 //top border for assets
 .columnizer-row-inner {
-  border-top: 3px solid #292929;
-  //  padding-top: 15px;
 
   .columnizer-row-contents-imagegroup & {
     border-top: none;
@@ -227,7 +223,7 @@ body {
 }
 
 //thin border for all size4,3,2 assets
-.asset-size-4, .asset-size-3, .asset-size-2 {
+.asset-size-4, .asset-size-3, .asset-size-2, .asset-size-1 {
   border-bottom: 1px solid #ccc;
   &:hover {
     border-bottom-color: @custom-color;
@@ -299,7 +295,6 @@ body {
 
 //special border at top for size1 image with only one image within
 .one-image {
-  border-top: 3px solid #292929;
   padding-top: 20px;
   margin-top: -20px;
 }
@@ -319,6 +314,23 @@ body {
 .asset-type-imagegroup {
   .lt-ie9 .cycle-pager {
     display: none;
+  }
+
+  .asset-title {
+    // padding: 12px 10px;
+    padding: 10px 25px;
+    background: #444;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #FFF;
+    margin-bottom: 0;
+  }
+
+  .description {
+    background: #EBE9E4;
+    // padding: 15px 10px;
+    padding: 25px;
+    margin: 0;
   }
 
   .populr-image-slider .slideshow {
@@ -343,12 +355,13 @@ body {
       // background: #111;
       // background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
-      bottom: -37px;
+      bottom: 10px;
       font-family: Verdana, sans-serif;
+      background: rgba(255, 255, 255, 0.58);
 
       span {
         float: right;
-        padding: 0 4px;
+        padding: 0 3px;
         margin-top: -2px;
         -webkit-transform: scale(.8);
         -moz-transform: scale(.8);
@@ -397,40 +410,26 @@ body {
     }
 
   }
-  &.asset-size-4 {
-    .populr-image-slider {
-      margin-bottom: 20px;
-    }
-  }
 }
 
 //Embed asset styling
 .asset-type-embedgroup {
 
-  &.asset-size-1 {
-    margin-top: 20px;
-    .embed div.height-conformed {
-      margin-bottom: 20px;
-    }
+  .asset-title {
+    // padding: 12px 10px;
+    padding: 5px 25px;
+    background: #444;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #FFF;
+    margin-bottom: 0;
   }
-  &.asset-size-2 {
-    .embed  div.height-conformed {
-      margin-bottom: 20px;
-    }
 
-
-  }
-  &.asset-size-3 {
-    .embed  div.height-conformed {
-      margin-bottom: 20px;
-    }
-
-  }
-  &.asset-size-4 {
-
-    .embed div.height-conformed {
-      margin-bottom: 20px;
-    }
+  .description {
+    background: #EBE9E4;
+    // padding: 15px 10px;
+    padding: 25px;
+    margin: 0;
   }
 }
 
@@ -442,7 +441,6 @@ body {
   // padding-left: 20px;
   &.asset-size-1 { margin-top: 5px !important; }
   &.asset-size-2, &.asset-size-3, &.asset-size-4 {
-    margin-top: -15px;
     padding-bottom: 15px;
   }
 
@@ -450,17 +448,17 @@ body {
   &.columnizer-cols2, &.columnizer-cols3, &.columnizer-cols4 { padding-top: 0; }
 
   .asset-title {
-    padding: 12px 10px;
-    line-height: 22px;
+    padding: 5px 25px;
     background: #444;
     font-size: 18px;
+    line-height: 1.8;
     color: #FFF;
     margin-bottom: 0;
   }
 
   .description {
     background: #EBE9E4;
-    padding: 15px 10px;
+    padding: 25px;
     margin: 0;
   }
 
@@ -555,12 +553,6 @@ body {
   zoom: 1;
 }
 
-/* IE7 */
-.lt-ie9 {
-  #container-for-logo-title, #main-region {
-    background-color: #F7F6F0;
-  }
-}
 
 .lt-ie8 {
   .columnizer-col4 { width: 23%; }
@@ -665,14 +657,18 @@ body {
     padding-left: 7%;
     padding-right: 7%;
 
-    #pop-logo {
-      margin-top: 35px;
-      margin-bottom: 0;
-      text-align: left;
+    #logo-box {
+      float: none;
+      width: auto !important;
+    }
 
+    #pop-logo {
+      margin-bottom: 0;
     }
 
   }
+  .font-size-larger { font-size: 1.2em !important; }
+  .font-size-smaller { font-size: 0.8em !important; }
 
   .columnizer-row-inner { max-width: 95% !important; }
 

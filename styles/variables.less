@@ -4,7 +4,6 @@
 */
 // Use this statement to import Google Web Fonts
 // @import '//fonts.googleapis.com/css?family=Open+Sans:300,700spo&.css';
-@import '//fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic';
 
 // Use @base-url when specifying relative paths to images, fonts,
 // and other resources.
@@ -24,7 +23,7 @@
 */
 
 // @headline-font-family is changed with the Font dropdown 
-@headline-font-family: 'Droid Serif', serif;
+@headline-font-family: Georgia, Times, 'Times New Roman', serif;
 
 // @custom-color is changed with the custome color picker in the Color 
 // dropdown. The color picker will only be available to your users if 
@@ -59,37 +58,32 @@
 
 .columnizer-row-inner {
   margin: 0 auto;
-  max-width: 93%; //960px
+  max-width: 960px;
 
 }
 
 .columnizer-col {
   float: left;
-  //	margin: 10px 0;
 
   .columnizer-cols1 & {
     width: 100%;
   }
-  //920px/960px
   .columnizer-cols2 & {
     width: 48.35%;
     margin-left: 3.3%;
     padding-top: 20px;
   }
-  //430px/960px
   .columnizer-cols3 & {
     width: 31.67%;
     margin-left: 2.495%;
     padding-top: 20px;
   }
-  //266px/960px % 11px / 960px
 
   .columnizer-cols4 & {
     width: 23.35%;
     margin-left: 2.2%;
     padding-top: 20px;
   }
-  // 185px/960px
 
   &:first-child {
     margin-left: 0;
@@ -110,7 +104,7 @@
 
 .columnizer-row {
   *zoom: 1;
-  margin: 20px;
+  margin: 50px 0 10px 10px;
 }
 
 // If you've set @populr-theme-version to 1, we recommend using these mixins.
