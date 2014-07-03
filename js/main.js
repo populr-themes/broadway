@@ -19,7 +19,7 @@
 
   $(document).on('pop-initialized', function() {
     $(window).on('resize', _.throttle(fixColumnHeights));
-    $('.columnizer-row .asset').live('initialize', _.throttle(fixColumnHeights));
+    $('.columnizer-row .asset').live('initialize', fixColumnHeights);
     $('.columnizer-row .asset').live('destroy', function() {
       $(this).find('.asset').css('min-height', '');
     });
